@@ -183,7 +183,24 @@ public abstract class Butten extends AbstractEntity implements IButten {
 
     public static void generateTxtRess(Rectangle[] ressButtens, ScreenFactory screenFactory)
     {
-        stringTxt = new StringTxt(ressButtens[0].getX() + ressButtens[0].getWidth() + 40, ressButtens[0].getY(), ressButtens[1].getX() - (ressButtens[0].getX() + ressButtens[0].getWidth() + 60), ressButtens[0].getHeight(), String.valueOf(screenFactory.getGame().getWindow().getWidth() - 6) + "X" + String.valueOf(screenFactory.getGame().getWindow().getHeight() - 27)) {
+        // Denne er veldig lang, og blir fotest anbefalt å deles opp
+        // stringTxt = new StringTxt(ressButtens[0].getX() + ressButtens[0].getWidth() + 40, ressButtens[0].getY(), ressButtens[1].getX() - (ressButtens[0].getX() + ressButtens[0].getWidth() + 60), ressButtens[0].getHeight(), String.valueOf(screenFactory.getGame().getWindow().getWidth() - 6) + "X" + String.valueOf(screenFactory.getGame().getWindow().getHeight() - 27)) {
+        // F.eks slik:
+        stringTxt = new StringTxt(  ressButtens[0].getX() + ressButtens[0].getWidth() + 40, 
+						            ressButtens[0].getY(), 
+					            	ressButtens[1].getX() - (ressButtens[0].getX() + ressButtens[0].getWidth() + 60), 
+					            	ressButtens[0].getHeight(), 
+				            		String.valueOf(screenFactory.getGame().getWindow().getWidth() - 6) + "X" 
+ 							            	       + String.valueOf(screenFactory.getGame().getWindow().getHeight() - 27)
+					             ) {
+        // En annen ting: Hva er 40?, 60?, 27?, 6? og også 0 ... 
+        // for ikke å snakke om 800, 600, 1280, 1152, som går igjen FLERE steder!
+        // Disse bør deklareres som konstanter med gode forståelige navn øverst i koden eller i egen environment.
+        // Slike konstanter (enum) skal etter konvensjon alltid skrives i BARE_STORE_BOKSTAVER
+        // Sjekk f.eks: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+        
+
+
             @Override
             public void onUpdate()
             {
