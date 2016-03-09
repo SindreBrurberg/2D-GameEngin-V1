@@ -5,23 +5,23 @@ import java.awt.*;
 
 public interface IEntity {
 
-    public double getWidth();
+	double getWidth();
 
-    public void setWidth(double Width);
+	void setWidth(double Width);
 
-    public double getHeight();
+	double getHeight();
 
-    public void setHeight(double Height);
+	void setHeight(double Height);
 
-    public double getX();
+	double getX();
 
-    public void setX(double x);
+	void setX(double x);
 
-    public double getY();
+	double getY();
 
-    public void setY(double y);
+	void setY(double y);
 
-    public void update();
+	void update();
 
-    public void draw(Graphics2D g2d);
+	void draw(Graphics2D g2d);
 }

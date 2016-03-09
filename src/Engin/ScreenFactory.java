@@ -11,28 +11,24 @@ import Engin.Core.Game;
  */
 public class ScreenFactory {
 
-    private final Game game;
-    private Screen screen;
+	private final Game game;
+	private Screen screen;
 
-    public ScreenFactory(Game game)
-    {
-        this.game = game;
-    }
+	public ScreenFactory(Game game) {
+		this.game = game;
+	}
 
-    public void showScreen(Screen screen)
-    {
-        this.screen = screen;
-        this.screen.onCreate();
-        this.screen.created = true;
-    }
+	public void showScreen(Screen screen) {
+		this.screen = screen;
+		this.screen.onCreate();
+		this.screen.created = true;
+	}
 
-    public Screen getCurrentScreen()
-    {
-        return screen;
-    }
+	public Screen getCurrentScreen() {
+		return screen;
+	}
 
-    public Game getGame()
-    {
-        return game;
-    }
+	public Game getGame() {
+		return game;
+	}
 }

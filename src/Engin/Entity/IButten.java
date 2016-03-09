@@ -2,12 +2,13 @@ package Engin.Entity;
 
 /**
  * Created by Dethsanius on 24.03.2014, project is Games 2D package are Engin.
+ * IButtesn is the interface for the amazing Butten class we all love
  */
 public interface IButten {
 
-    public String getTXT();
+	String getTXT();
 
-    public void setTXT(String TXT);
+	void setTXT(String TXT);
 
-    public void isPushed();
+	void isPushed();
 }

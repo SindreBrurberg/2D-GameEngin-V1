@@ -5,9 +5,12 @@ import java.io.PrintWriter;
 
 /**
  * Created by Dethsanius on 12.01.2015.
+ * Interface of RWF
  */
 public interface IReadWriteFile {
-    public FileWriter getFile(String filePathName);
-    public PrintWriter StartWrite(FileWriter fileWriter);
-    public void EndWrite(FileWriter fileWriter);
+	FileWriter getFile(String filePathName);
+
+	PrintWriter StartWrite(FileWriter fileWriter);
+
+	void EndWrite(FileWriter fileWriter);
 }
